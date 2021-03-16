@@ -1,0 +1,12 @@
+#@ load("@ytt:data", "data")
+
+apiVersion: kpack.io/v1alpha1
+kind: ClusterStack
+metadata:
+  name: #@ "stack-" + data.values.USER_ID
+spec:
+  buildImage:
+    image: harbor-lab.livefire.dev/tbs/build-service/build@sha256:b2dcea341473feb97db27cc8277c2ca1c87ce001ba8609d701d39a58ac861dfb
+  id: io.buildpacks.stacks.bionic
+  runImage:
+    image: harbor-lab.livefire.dev/tbs/build-service/run@sha256:50f370dfdc12e45ef16a9804e5982c7905934aa91ddeb71f3d402947c10b8046

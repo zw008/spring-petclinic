@@ -1,0 +1,17 @@
+#@ load("@ytt:data", "data")
+
+apiVersion: kpack.io/v1alpha1
+kind: ClusterStore
+metadata:
+  name: #@ "store-" + data.values.USER_ID
+spec:
+  sources:
+  - image: harbor-lab.livefire.dev/tbs/build-service/tanzu-buildpacks_go@sha256:64ba98089642bdb1ae22fde9b12fb905e0034a2e99c4564249bbc5190dcef8f9
+  - image: harbor-lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:b503532498665b6382ba3ad7b74a4b9e0c1ee76e09c5c176b30479147236c319
+  - image: harbor-lab.livefire.dev/tbs/build-service/tanzu-buildpacks_nodejs@sha256:5050ac76d043395422e4ae3cab74d5bb31dc4e9f66414d0be3c4ebb7d1276312
+  - image: harbor-lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java-native-image@sha256:12f8ff3e904d1698442c05a73a7318bfbbaf535e582704ff02f675d1fe4ebe7f
+  - image: harbor-lab.livefire.dev/tbs/build-service/tanzu-buildpacks_dotnet-core@sha256:9ecfbe3c3565f6bc15d5aa116615cf33195a5d27133438d285f9d812f5c72664
+  - image: harbor-lab.livefire.dev/tbs/build-service/tanzu-buildpacks_php@sha256:fd5abb334f4adbcf46f42977992af145db04fb262d4c516ff4264f94e1fcd689
+  - image: harbor-lab.livefire.dev/tbs/build-service/tanzu-buildpacks_nginx@sha256:e67d5cd2e5240a9eb7a899b9b5d979ad85d0cf6c8182e15424516dac9f577371
+  - image: harbor-lab.livefire.dev/tbs/build-service/tanzu-buildpacks_httpd@sha256:34989fb8e264ccaea7916a9017b306d621b017920f71439fc515164ac0484cf5
+  - image: harbor-lab.livefire.dev/tbs/build-service/paketo-buildpacks_procfile@sha256:bf6a4265db23ae25b34d402cd24e04c36dccdf24d6a6b9297f1d154a9d0b8062
