@@ -6,7 +6,7 @@ metadata:
   name: #@ "stack-" + data.values.USER_ID
 spec:
   buildImage:
-    image: harbor-lab.livefire.dev/tbs/build-service/build@sha256:b2dcea341473feb97db27cc8277c2ca1c87ce001ba8609d701d39a58ac861dfb
+    image: registry.lab.livefire.dev/tbs/build-service/build@sha256:c484ec9919b724ee93bde4431fa79996e42c0bd1d5b69b78450e403451aaa615
   id: io.buildpacks.stacks.bionic
   runImage:
-    image: harbor-lab.livefire.dev/tbs/build-service/run@sha256:50f370dfdc12e45ef16a9804e5982c7905934aa91ddeb71f3d402947c10b8046
+    image: registry.lab.livefire.dev/tbs/build-service/run@sha256:367a43536f60c21190cea5c06d040d01d29f4102840d6b3e1dcd72ed2eb71721
