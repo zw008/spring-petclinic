@@ -1,0 +1,1498 @@
+apiVersion: kpack.io/v1alpha1
+kind: ClusterStore
+metadata:
+  annotations:
+    kpack.io/import-timestamp: "2021-03-18T05:48:43-07:00"
+    kubectl.kubernetes.io/last-applied-configuration: '{"kind":"ClusterStore","apiVersion":"kpack.io/v1alpha1","metadata":{"name":"default","creationTimestamp":null},"spec":{"sources":[{"image":"registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_go@sha256:64ba98089642bdb1ae22fde9b12fb905e0034a2e99c4564249bbc5190dcef8f9"},{"image":"registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e"},{"image":"registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_nodejs@sha256:5050ac76d043395422e4ae3cab74d5bb31dc4e9f66414d0be3c4ebb7d1276312"},{"image":"registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java-native-image@sha256:662b27ae983ff6b0aed6eca1e5ba7e25cab178204a628ca0542cfe23c25826bf"},{"image":"registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_dotnet-core@sha256:9ecfbe3c3565f6bc15d5aa116615cf33195a5d27133438d285f9d812f5c72664"},{"image":"registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_php@sha256:fd5abb334f4adbcf46f42977992af145db04fb262d4c516ff4264f94e1fcd689"},{"image":"registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_nginx@sha256:e67d5cd2e5240a9eb7a899b9b5d979ad85d0cf6c8182e15424516dac9f577371"},{"image":"registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_httpd@sha256:34989fb8e264ccaea7916a9017b306d621b017920f71439fc515164ac0484cf5"},{"image":"registry.lab.livefire.dev/tbs/build-service/paketo-buildpacks_procfile@sha256:bf6a4265db23ae25b34d402cd24e04c36dccdf24d6a6b9297f1d154a9d0b8062"}]},"status":{}}'
+  creationTimestamp: "2021-03-18T12:48:43Z"
+  generation: 1
+  managedFields:
+  - apiVersion: kpack.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kpack.io/import-timestamp: {}
+          f:kubectl.kubernetes.io/last-applied-configuration: {}
+      f:spec:
+        .: {}
+        f:sources: {}
+    manager: kp
+    operation: Update
+    time: "2021-03-18T12:48:43Z"
+  - apiVersion: kpack.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:buildpacks: {}
+        f:conditions: {}
+        f:observedGeneration: {}
+    manager: controller
+    operation: Update
+    time: "2021-05-14T18:13:51Z"
+  name: default
+  resourceVersion: "24174111"
+  selfLink: /apis/kpack.io/v1alpha1/clusterstores/default
+  uid: 79927e27-025a-4483-b0ad-44fb312bfe43
+spec:
+  sources:
+  - image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_go@sha256:64ba98089642bdb1ae22fde9b12fb905e0034a2e99c4564249bbc5190dcef8f9
+  - image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+  - image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_nodejs@sha256:5050ac76d043395422e4ae3cab74d5bb31dc4e9f66414d0be3c4ebb7d1276312
+  - image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java-native-image@sha256:662b27ae983ff6b0aed6eca1e5ba7e25cab178204a628ca0542cfe23c25826bf
+  - image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_dotnet-core@sha256:9ecfbe3c3565f6bc15d5aa116615cf33195a5d27133438d285f9d812f5c72664
+  - image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_php@sha256:fd5abb334f4adbcf46f42977992af145db04fb262d4c516ff4264f94e1fcd689
+  - image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_nginx@sha256:e67d5cd2e5240a9eb7a899b9b5d979ad85d0cf6c8182e15424516dac9f577371
+  - image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_httpd@sha256:34989fb8e264ccaea7916a9017b306d621b017920f71439fc515164ac0484cf5
+  - image: registry.lab.livefire.dev/tbs/build-service/paketo-buildpacks_procfile@sha256:bf6a4265db23ae25b34d402cd24e04c36dccdf24d6a6b9297f1d154a9d0b8062
+status:
+  buildpacks:
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:f8136cec486b6c60a08a4b4b0c2b98055ddab9e0e662e80f23686ebb063493d8
+    digest: sha256:11b1f97e147e7c86248ecd276dad850bf27d1d2d5edded86f3957455537ac08b
+    homepage: https://github.com/paketo-buildpacks/apache-tomcat
+    id: paketo-buildpacks/apache-tomcat
+    size: 46644790
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 5.1.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:5e583d08d90ff6c19f607da5e423f0a8551529f67febb35072a942cdb7a3ed38
+    digest: sha256:0fe0b4cb7d8bb79ef04b0fcd2b3e015ba6ddea5b54ed723ddbdb7a6947952bc0
+    homepage: https://github.com/paketo-buildpacks/azure-application-insights
+    id: paketo-buildpacks/azure-application-insights
+    size: 19372902
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 4.2.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:ebd465270ae7d073e504083a1efc4d5dc98382c1ab7bf9e02f216c2b0c54739c
+    digest: sha256:deecd17c16048605610d66779e08bb0cda66e12d05f501a6d3c539a474f63f54
+    homepage: https://github.com/paketo-buildpacks/bellsoft-liberica
+    id: paketo-buildpacks/bellsoft-liberica
+    size: 677184952
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 7.0.1
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:4eeff7326a8d490be8bc37d1ed9faad508959fa887167f2d4b6d90aaebdeca37
+    digest: sha256:4e21f5f5e7f3229314382b22cc493a06e20ed6064df6186d5432f834b962dc6a
+    homepage: https://github.com/paketo-buildpacks/ca-certificates
+    id: paketo-buildpacks/ca-certificates
+    size: 3065792
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 2.1.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:901b42d662c51df23feaa1a75f75a20b1837a1e3049785f325e2315959f34964
+    digest: sha256:3033a77b2ced8bdd002489e208583bf9a4d3c519ab942bcc1f635d045bda0780
+    homepage: https://github.com/paketo-buildpacks/debug
+    id: paketo-buildpacks/debug
+    size: 2626272
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 3.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:58adc411aa1bddc25aa684d5430e7986b9f39d1c3c51657dc65b3abd4626899c
+    digest: sha256:222676cc11c98974f27997ad26fe52f83594e733d6897a71d845dc8772c56060
+    homepage: https://github.com/paketo-buildpacks/dist-zip
+    id: paketo-buildpacks/dist-zip
+    size: 1438742
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 4.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:645f4ae41030c444eed79ec971e1273d12addb7e5ec909b9013e4a2a15419cd9
+    digest: sha256:eb34cd683aaac6f6fce17b3788928f2b9145c6414d26ee4c8d7d1585bc3d65ff
+    homepage: https://github.com/paketo-buildpacks/encrypt-at-rest
+    id: paketo-buildpacks/encrypt-at-rest
+    size: 2679123
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 3.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+      id: tanzu-buildpacks/java-native-image
+      version: 4.1.0
+    diffId: sha256:2d0d1eea4f3bf703a0b25b784995c57c03324b6e109a019e727cad64ce60b5d5
+    digest: sha256:9490bc35e385a4dedf8a303d16e0372c77531b09d46fe06978ef25a52c375bcf
+    homepage: https://github.com/paketo-buildpacks/environment-variables
+    id: paketo-buildpacks/environment-variables
+    size: 1522575
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java-native-image@sha256:662b27ae983ff6b0aed6eca1e5ba7e25cab178204a628ca0542cfe23c25826bf
+    version: 3.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:2d0d1eea4f3bf703a0b25b784995c57c03324b6e109a019e727cad64ce60b5d5
+    digest: sha256:9490bc35e385a4dedf8a303d16e0372c77531b09d46fe06978ef25a52c375bcf
+    homepage: https://github.com/paketo-buildpacks/environment-variables
+    id: paketo-buildpacks/environment-variables
+    size: 1522575
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 3.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+      id: tanzu-buildpacks/java-native-image
+      version: 4.1.0
+    diffId: sha256:1211e56c793cd03f4615d43fd2ba4700fa238b68452608ffdb48e7c661f074e2
+    digest: sha256:bea4952aa82c573ac01d003290c5cf1cb6282cd0c54471309e3356fe1c08ca84
+    homepage: https://github.com/paketo-buildpacks/executable-jar
+    id: paketo-buildpacks/executable-jar
+    size: 1609063
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java-native-image@sha256:662b27ae983ff6b0aed6eca1e5ba7e25cab178204a628ca0542cfe23c25826bf
+    version: 5.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:1211e56c793cd03f4615d43fd2ba4700fa238b68452608ffdb48e7c661f074e2
+    digest: sha256:bea4952aa82c573ac01d003290c5cf1cb6282cd0c54471309e3356fe1c08ca84
+    homepage: https://github.com/paketo-buildpacks/executable-jar
+    id: paketo-buildpacks/executable-jar
+    size: 1609063
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 5.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:f1d4a8bcb123b48734fb43ffad1182f3c21ee1a4789eb59569d7a75f11f0dcc5
+    digest: sha256:d636ebe3be2ce1f3056b54a59c1bc710e4b8030dc98c675df06dcb7df54f55d5
+    homepage: https://github.com/paketo-buildpacks/google-stackdriver
+    id: paketo-buildpacks/google-stackdriver
+    size: 10852354
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 3.4.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+      id: tanzu-buildpacks/java-native-image
+      version: 4.1.0
+    diffId: sha256:ce95c15d5b215aed8ea84dffbc16f48c15d0e9f3c67f49eff0b150d1472e8f09
+    digest: sha256:4780b5740cacedc8a0b43a9a01cecca37a59cbd19dcf7e311a0c859310b8562f
+    homepage: https://github.com/paketo-buildpacks/graalvm
+    id: paketo-buildpacks/graalvm
+    size: 842019345
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java-native-image@sha256:662b27ae983ff6b0aed6eca1e5ba7e25cab178204a628ca0542cfe23c25826bf
+    version: 6.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+      id: tanzu-buildpacks/java-native-image
+      version: 4.1.0
+    diffId: sha256:bb191e93c825369c3092b84b075c9e7d6c5a202caddcfad110f590090924a9c2
+    digest: sha256:9ae046ecb18056f5e7420a7d5be4e0d9aa3c66f8e93bc814059233954efed738
+    homepage: https://github.com/paketo-buildpacks/gradle
+    id: paketo-buildpacks/gradle
+    size: 110239959
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java-native-image@sha256:662b27ae983ff6b0aed6eca1e5ba7e25cab178204a628ca0542cfe23c25826bf
+    version: 5.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:bb191e93c825369c3092b84b075c9e7d6c5a202caddcfad110f590090924a9c2
+    digest: sha256:9ae046ecb18056f5e7420a7d5be4e0d9aa3c66f8e93bc814059233954efed738
+    homepage: https://github.com/paketo-buildpacks/gradle
+    id: paketo-buildpacks/gradle
+    size: 110239959
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 5.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+      id: tanzu-buildpacks/java-native-image
+      version: 4.1.0
+    diffId: sha256:74d5ba0dbbe057df5486f60e14701b007cc47c71375d674b4a617d35e7f4d94d
+    digest: sha256:cb3be2c2aa3b74cb8a67c1142a03601a21c981c1063d8f042822acc126e9a469
+    homepage: https://github.com/paketo-buildpacks/image-labels
+    id: paketo-buildpacks/image-labels
+    size: 1488810
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java-native-image@sha256:662b27ae983ff6b0aed6eca1e5ba7e25cab178204a628ca0542cfe23c25826bf
+    version: 3.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:74d5ba0dbbe057df5486f60e14701b007cc47c71375d674b4a617d35e7f4d94d
+    digest: sha256:cb3be2c2aa3b74cb8a67c1142a03601a21c981c1063d8f042822acc126e9a469
+    homepage: https://github.com/paketo-buildpacks/image-labels
+    id: paketo-buildpacks/image-labels
+    size: 1488810
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 3.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:f1593e0e66ec91bd2919e00e5c7ab6e3c2062ae7d8f9fd1af3bbd7315c7cd15b
+    digest: sha256:afab2981235dcf3d6ada61454c793d91564eb12dedc6fc468422acf9380a1006
+    homepage: https://github.com/paketo-buildpacks/jmx
+    id: paketo-buildpacks/jmx
+    size: 2355156
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 3.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+      id: tanzu-buildpacks/java-native-image
+      version: 4.1.0
+    diffId: sha256:da8ae0de0401a72c21725379165bb7baa2788e7933ed953fb2c9f72dbf5219fb
+    digest: sha256:2e39bb46a6cbfacd8d254566ae943349440e5327d86dfac411536b79eabc5caf
+    homepage: https://github.com/paketo-buildpacks/leiningen
+    id: paketo-buildpacks/leiningen
+    size: 2393727
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java-native-image@sha256:662b27ae983ff6b0aed6eca1e5ba7e25cab178204a628ca0542cfe23c25826bf
+    version: 3.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:da8ae0de0401a72c21725379165bb7baa2788e7933ed953fb2c9f72dbf5219fb
+    digest: sha256:2e39bb46a6cbfacd8d254566ae943349440e5327d86dfac411536b79eabc5caf
+    homepage: https://github.com/paketo-buildpacks/leiningen
+    id: paketo-buildpacks/leiningen
+    size: 2393727
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 3.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+      id: tanzu-buildpacks/java-native-image
+      version: 4.1.0
+    diffId: sha256:ec0874f0294072406f8a6a88215af4db1af15e28b784f9f98dbddf1be361c5c1
+    digest: sha256:7d1c6226656aa3264ac0f764fcedbc4222f3b73884a9cde68abdce73a3c7cd24
+    homepage: https://github.com/paketo-buildpacks/maven
+    id: paketo-buildpacks/maven
+    size: 11944516
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java-native-image@sha256:662b27ae983ff6b0aed6eca1e5ba7e25cab178204a628ca0542cfe23c25826bf
+    version: 5.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:ec0874f0294072406f8a6a88215af4db1af15e28b784f9f98dbddf1be361c5c1
+    digest: sha256:7d1c6226656aa3264ac0f764fcedbc4222f3b73884a9cde68abdce73a3c7cd24
+    homepage: https://github.com/paketo-buildpacks/maven
+    id: paketo-buildpacks/maven
+    size: 11944516
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 5.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+      id: tanzu-buildpacks/java-native-image
+      version: 4.1.0
+    diffId: sha256:dd4ebe97e0617c180fed15fb3d4c832efabd389d2aaf156d51d2808d1bbadd80
+    digest: sha256:9b63289e8f07b11110fa25a0c06c3dc7b9d27847de9b6a9c3a0d6c747c7a37ba
+    homepage: https://github.com/paketo-buildpacks/native-image
+    id: paketo-buildpacks/native-image
+    size: 1662031
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java-native-image@sha256:662b27ae983ff6b0aed6eca1e5ba7e25cab178204a628ca0542cfe23c25826bf
+    version: 4.0.0
+  - api: "0.4"
+    buildpackage:
+      homepage: https://github.com/paketo-buildpacks/procfile
+      id: paketo-buildpacks/procfile
+      version: 3.0.0
+    diffId: sha256:e6acd75d955c1f916b297215d53136a31350506608ff690b5455c3ec6c37f347
+    digest: sha256:a501c80531386798863dc0a9f45e3c2228f3be2f4691b4832a930d3a51dad6f0
+    homepage: https://github.com/paketo-buildpacks/procfile
+    id: paketo-buildpacks/procfile
+    size: 1509159
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/paketo-buildpacks_procfile@sha256:bf6a4265db23ae25b34d402cd24e04c36dccdf24d6a6b9297f1d154a9d0b8062
+    version: 3.0.0
+  - api: "0.5"
+    buildpackage:
+      id: tanzu-buildpacks/dotnet-core
+      version: 1.0.1
+    diffId: sha256:668776297c61d46183888120480fbac78adc6dfa43509368fc5be6ce38159a30
+    digest: sha256:1ad898d8bf0fbc18db4f657b084f97afd1479fa6c3f622fa782d16f340df7cb8
+    homepage: https://github.com/paketo-buildpacks/procfile
+    id: paketo-buildpacks/procfile
+    size: 1479824
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_dotnet-core@sha256:9ecfbe3c3565f6bc15d5aa116615cf33195a5d27133438d285f9d812f5c72664
+    version: 4.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+      id: tanzu-buildpacks/java-native-image
+      version: 4.1.0
+    diffId: sha256:ba9afa9bd3bab4bb943859739ca6e4701c7c8e8a08f47dda3790b13b788166e1
+    digest: sha256:6f1539bc4ff65d220ed216abdec14cc6a6eea11b0cfccab846fcbe16b8e27371
+    homepage: https://github.com/paketo-buildpacks/procfile
+    id: paketo-buildpacks/procfile
+    size: 1510217
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java-native-image@sha256:662b27ae983ff6b0aed6eca1e5ba7e25cab178204a628ca0542cfe23c25826bf
+    version: 4.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:ba9afa9bd3bab4bb943859739ca6e4701c7c8e8a08f47dda3790b13b788166e1
+    digest: sha256:6f1539bc4ff65d220ed216abdec14cc6a6eea11b0cfccab846fcbe16b8e27371
+    homepage: https://github.com/paketo-buildpacks/procfile
+    id: paketo-buildpacks/procfile
+    size: 1510217
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 4.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+      id: tanzu-buildpacks/java-native-image
+      version: 4.1.0
+    diffId: sha256:3e5771ddfb2e4d03a6aaa84c4f17f0203581566a818e029b4d4e8d0a116a5752
+    digest: sha256:fb21e6e48ada384d7b5fba215cf751ed4f7745d09b9a7fc080028a00e3f110f3
+    homepage: https://github.com/paketo-buildpacks/sbt
+    id: paketo-buildpacks/sbt
+    size: 20152888
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java-native-image@sha256:662b27ae983ff6b0aed6eca1e5ba7e25cab178204a628ca0542cfe23c25826bf
+    version: 5.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:3e5771ddfb2e4d03a6aaa84c4f17f0203581566a818e029b4d4e8d0a116a5752
+    digest: sha256:fb21e6e48ada384d7b5fba215cf751ed4f7745d09b9a7fc080028a00e3f110f3
+    homepage: https://github.com/paketo-buildpacks/sbt
+    id: paketo-buildpacks/sbt
+    size: 20152888
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 5.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+      id: tanzu-buildpacks/java-native-image
+      version: 4.1.0
+    diffId: sha256:30827a59c9b232ffe7d3dd9eca84df997bcb9325504ad13d96a100aaa59f86a1
+    digest: sha256:50819cfa062105575fbb0631324b8c836dcaa29106d5a0617101ae79770768a6
+    homepage: https://github.com/paketo-buildpacks/spring-boot
+    id: paketo-buildpacks/spring-boot
+    size: 3312243
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java-native-image@sha256:662b27ae983ff6b0aed6eca1e5ba7e25cab178204a628ca0542cfe23c25826bf
+    version: 4.1.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:30827a59c9b232ffe7d3dd9eca84df997bcb9325504ad13d96a100aaa59f86a1
+    digest: sha256:50819cfa062105575fbb0631324b8c836dcaa29106d5a0617101ae79770768a6
+    homepage: https://github.com/paketo-buildpacks/spring-boot
+    id: paketo-buildpacks/spring-boot
+    size: 3312243
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 4.1.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:e1ee08b14a96b69fed5a45e3de896904b590fdbb179f71b7bb28634ebd90356d
+    digest: sha256:370c9d820220e1e946587c924bd173ff5f93aa4f8ac9f35e7895632f3b3b8fcc
+    homepage: https://github.com/pivotal-cf/tanzu-apache-skywalking
+    id: tanzu-buildpacks/apache-skywalking
+    size: 176403269
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 3.1.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:e3fc54937f6a4bff956260fad621e1a2e26cd6dbdb32a5e4ce5da9b32ee8abd2
+    digest: sha256:1cc894fcfd70c3d2f577356558e24ce0c4289df0c49588eb8093a11c2e14e057
+    homepage: https://github.com/pivotal-cf/tanzu-appdynamics
+    id: tanzu-buildpacks/appdynamics
+    size: 104094287
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 3.1.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:31508f7ba21d14370751a5a6524b654fb745951f91ebb2342d45f73924423e74
+    digest: sha256:0cffbb59603e6e94a0f3330e59bd37f8ce18676682750c9a4e499b1e45123f39
+    homepage: https://github.com/pivotal-cf/tanzu-aspectj
+    id: tanzu-buildpacks/aspectj
+    size: 1513720
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 3.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:c7ccdb3703120824f6bd02819ab748595b22e92d1bd9c0e4b69631270f8ef20f
+    digest: sha256:362f1fbc2e91e60ecb915a65e523b6f6e15070d806fe82d1b2533595d232007c
+    homepage: https://github.com/pivotal-cf/tanzu-checkmarx
+    id: tanzu-buildpacks/checkmarx
+    size: 3087365
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 3.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:23145be28daf166c08457f27ae4a7f10c6b28d717d148131f863048cfd40a531
+    digest: sha256:eb850dbedd1944b77ae1f84a7390cc762649466cae2c1a24203a6624272eb687
+    homepage: https://github.com/pivotal-cf/tanzu-contrast-security
+    id: tanzu-buildpacks/contrast-security
+    size: 13014288
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 3.3.0
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/go
+      version: 1.0.9
+    diffId: sha256:3c2a2eeae21ab305773c8c405182eeeaf9369510401feebcfae1e8d8b3d1bff0
+    digest: sha256:ee626428f18e71364509595acc2841effe87df87c6552ccc53e4bb51ace8873f
+    id: tanzu-buildpacks/dep-ensure
+    size: 1369653
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_go@sha256:64ba98089642bdb1ae22fde9b12fb905e0034a2e99c4564249bbc5190dcef8f9
+    version: 0.0.29
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/go
+      version: 1.0.9
+    diffId: sha256:90091298cd4ffd701a7f63b401d7fd3c3201b7538beebfe4b702734f7a8910ed
+    digest: sha256:ff15273e28d663e7191f5879d1a9ce0c9021eaf7c32926e610a2c86f394bb875
+    id: tanzu-buildpacks/dep
+    size: 10590176
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    - id: io.paketo.stacks.tiny
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_go@sha256:64ba98089642bdb1ae22fde9b12fb905e0034a2e99c4564249bbc5190dcef8f9
+    version: 0.0.10
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/dotnet-core
+      version: 1.0.1
+    diffId: sha256:51ddf7c9cbb3e357e38d322dacb7128d0b6b5329a5982a8c87c6065ff7784f82
+    digest: sha256:76a54d35a1c84a09ad3a4e3e1ab35bb708b69132f89ef0cf367546240cb44d66
+    id: tanzu-buildpacks/dotnet-core-aspnet
+    size: 72216972
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_dotnet-core@sha256:9ecfbe3c3565f6bc15d5aa116615cf33195a5d27133438d285f9d812f5c72664
+    version: 0.1.0
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/dotnet-core
+      version: 1.0.1
+    diffId: sha256:2eb65bf6efb1feeacaf75a4e17711cb8f962918626eb1c68dff2e60e6f6650f9
+    digest: sha256:98128b8735a528143363d79774043a86df0d60bea21ee76c936564a629f29776
+    id: tanzu-buildpacks/dotnet-core-runtime
+    size: 136536485
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_dotnet-core@sha256:9ecfbe3c3565f6bc15d5aa116615cf33195a5d27133438d285f9d812f5c72664
+    version: 0.1.2
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/dotnet-core
+      version: 1.0.1
+    diffId: sha256:c3e168739c359d49501019b901ba3d863c5893a30b2d91577080fef0615b9935
+    digest: sha256:be925ea8c7653826a4dfd97113a7785a0780f7015633ec11e4a909a7b36091dc
+    id: tanzu-buildpacks/dotnet-core-sdk
+    size: 410030423
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_dotnet-core@sha256:9ecfbe3c3565f6bc15d5aa116615cf33195a5d27133438d285f9d812f5c72664
+    version: 0.1.0
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/dotnet-core
+      version: 1.0.1
+    diffId: sha256:88ac7758d61f6871ead5677f6807bea7b04941fcd7710465838c70e013c4d286
+    digest: sha256:c411b3a3a9b54a37fbc55d564e1d27ce78112f1655386855d264375b36803e69
+    id: tanzu-buildpacks/dotnet-core
+    order:
+    - group:
+      - id: tanzu-buildpacks/dotnet-core-runtime
+        version: 0.1.2
+      - id: tanzu-buildpacks/dotnet-core-aspnet
+        optional: true
+        version: 0.1.0
+      - id: tanzu-buildpacks/dotnet-core-sdk
+        version: 0.1.0
+      - id: tanzu-buildpacks/icu
+        optional: true
+        version: 0.0.9
+      - id: tanzu-buildpacks/node-engine
+        optional: true
+        version: 0.1.3
+      - id: tanzu-buildpacks/dotnet-publish
+        version: 0.1.0
+      - id: tanzu-buildpacks/dotnet-execute
+        version: 0.1.0
+      - id: paketo-buildpacks/procfile
+        optional: true
+        version: 4.0.0
+    - group:
+      - id: tanzu-buildpacks/dotnet-core-runtime
+        version: 0.1.2
+      - id: tanzu-buildpacks/dotnet-core-aspnet
+        optional: true
+        version: 0.1.0
+      - id: tanzu-buildpacks/dotnet-core-sdk
+        optional: true
+        version: 0.1.0
+      - id: tanzu-buildpacks/icu
+        optional: true
+        version: 0.0.9
+      - id: tanzu-buildpacks/node-engine
+        optional: true
+        version: 0.1.3
+      - id: tanzu-buildpacks/dotnet-execute
+        version: 0.1.0
+      - id: paketo-buildpacks/procfile
+        optional: true
+        version: 4.0.0
+    - group:
+      - id: tanzu-buildpacks/icu
+        optional: true
+        version: 0.0.9
+      - id: tanzu-buildpacks/node-engine
+        optional: true
+        version: 0.1.3
+      - id: tanzu-buildpacks/dotnet-execute
+        version: 0.1.0
+      - id: paketo-buildpacks/procfile
+        optional: true
+        version: 4.0.0
+    size: 427
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_dotnet-core@sha256:9ecfbe3c3565f6bc15d5aa116615cf33195a5d27133438d285f9d812f5c72664
+    version: 1.0.1
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/dotnet-core
+      version: 1.0.1
+    diffId: sha256:d87a2e573ffc874997f4a09a919cdc5b6a019c637fead5985f4884e860c20b92
+    digest: sha256:2c1dd502988c065228913687d95667d7901179da9da116c745b09f333c1f4c27
+    id: tanzu-buildpacks/dotnet-execute
+    size: 3350157
+    stacks:
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    - id: io.buildpacks.stacks.bionic
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_dotnet-core@sha256:9ecfbe3c3565f6bc15d5aa116615cf33195a5d27133438d285f9d812f5c72664
+    version: 0.1.0
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/dotnet-core
+      version: 1.0.1
+    diffId: sha256:ec389fc8583d618eeafce397f1285b5ca19564f5f7a48e95ff769ea6c849751d
+    digest: sha256:9e2571ae14bacf15b9ced1e59735949a5c2039b9ca0a6ba9658536862169f779
+    id: tanzu-buildpacks/dotnet-publish
+    size: 3393225
+    stacks:
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    - id: io.buildpacks.stacks.bionic
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_dotnet-core@sha256:9ecfbe3c3565f6bc15d5aa116615cf33195a5d27133438d285f9d812f5c72664
+    version: 0.1.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:5e6ca0a646e1a93eb8854c26936b68d96cecb040888e5868223ed44d1fe565c3
+    digest: sha256:0bb5574410c3d8d80a19691777ff34fc3bdd9eee1b92da489cfdd1c2b6918914
+    homepage: https://github.com/pivotal-cf/tanzu-dynatrace
+    id: tanzu-buildpacks/dynatrace
+    size: 4419703
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 3.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:33905031eeeed66210a63cb6d7eddf249ba5ffc21b07a46c982da8dbd893879d
+    digest: sha256:0396190b43754f67cebcac6fdbdde23889c9349ff029b7821d397e343b3cba08
+    homepage: https://github.com/pivotal-cf/tanzu-elastic-apm
+    id: tanzu-buildpacks/elastic-apm
+    size: 11154408
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 3.3.0
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/go
+      version: 1.0.9
+    diffId: sha256:0081ae64e0919282a40c1453421caa6f0ef3220a201b6e4c1a850b73fdbc6db0
+    digest: sha256:1db75326ad6ac4169bd9ad545562f1118e46dc3cbc69216925dfe6fc5b1a3c4b
+    id: tanzu-buildpacks/go-build
+    size: 1526451
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_go@sha256:64ba98089642bdb1ae22fde9b12fb905e0034a2e99c4564249bbc5190dcef8f9
+    version: 0.0.23
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/go
+      version: 1.0.9
+    diffId: sha256:9cc6e63c8a7b118d7c4eaca6398b8f5217dacde5227644d22ed0fd87de350b99
+    digest: sha256:0518c0eb89826ddbcdecc7468947911f7e160d0edc2d4fb62eb8afb301dcaa32
+    id: tanzu-buildpacks/go-dist
+    size: 529229473
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_go@sha256:64ba98089642bdb1ae22fde9b12fb905e0034a2e99c4564249bbc5190dcef8f9
+    version: 0.1.3
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/go
+      version: 1.0.9
+    diffId: sha256:f956172b5fb0bcfcbcba85a5334c770f25348bafca1bf368ae71abee411fc8b4
+    digest: sha256:ab740f06f65444acd928af8be3243cce5af2f313419598936a02b9750b073275
+    id: tanzu-buildpacks/go-mod-vendor
+    size: 1278883
+    stacks:
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    - id: io.buildpacks.stacks.bionic
+    - id: io.paketo.stacks.tiny
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_go@sha256:64ba98089642bdb1ae22fde9b12fb905e0034a2e99c4564249bbc5190dcef8f9
+    version: 0.0.26
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/go
+      version: 1.0.9
+    diffId: sha256:2d61f65d89892d61c09045a0a65f763df26a6727568979ceea536b9f698ac269
+    digest: sha256:27520e1b07aa8d5123f1f394f73ae17b827d3ca82d580f7690b14b55b3960d57
+    id: tanzu-buildpacks/go
+    order:
+    - group:
+      - id: tanzu-buildpacks/go-dist
+        version: 0.1.3
+      - id: tanzu-buildpacks/go-mod-vendor
+        version: 0.0.26
+      - id: tanzu-buildpacks/go-build
+        version: 0.0.23
+    - group:
+      - id: tanzu-buildpacks/go-dist
+        version: 0.1.3
+      - id: tanzu-buildpacks/dep
+        version: 0.0.10
+      - id: tanzu-buildpacks/dep-ensure
+        version: 0.0.29
+      - id: tanzu-buildpacks/go-build
+        version: 0.0.23
+    - group:
+      - id: tanzu-buildpacks/go-dist
+        version: 0.1.3
+      - id: tanzu-buildpacks/go-build
+        version: 0.0.23
+    size: 348
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_go@sha256:64ba98089642bdb1ae22fde9b12fb905e0034a2e99c4564249bbc5190dcef8f9
+    version: 1.0.9
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/php
+      version: 0.0.5
+    diffId: sha256:eaa6c7051705a0631d3992bdbd34d20227ff5bda126071c3040e5202756eae71
+    digest: sha256:9ff632fee4d3f0a376a38adcb5d22b32efeefa0d7a36ab47d4064ff5600d25b7
+    id: tanzu-buildpacks/httpd
+    size: 19004615
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_php@sha256:fd5abb334f4adbcf46f42977992af145db04fb262d4c516ff4264f94e1fcd689
+    version: 0.0.39
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/httpd
+      version: 0.0.40
+    diffId: sha256:025fcd43167c93ccd6a0fa8b924dfdf508dce8973e33c6ac6dda19d2410a64d4
+    digest: sha256:63f95209f425588546f7f07f5bd71f018baa69cb2275d98c084bc70d609d2a2b
+    id: tanzu-buildpacks/httpd
+    size: 19255503
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_httpd@sha256:34989fb8e264ccaea7916a9017b306d621b017920f71439fc515164ac0484cf5
+    version: 0.0.40
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/dotnet-core
+      version: 1.0.1
+    diffId: sha256:818df50ef7a55f88d9de5eb16a0c094692f03100503966243cfb16486a5235b5
+    digest: sha256:ef08460956a4bb52d6fb13c3f15cccbb5474c6c73a6ea917a2795530c44989fe
+    id: tanzu-buildpacks/icu
+    size: 32671018
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_dotnet-core@sha256:9ecfbe3c3565f6bc15d5aa116615cf33195a5d27133438d285f9d812f5c72664
+    version: 0.0.9
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:2c0eeedfea881b912082736c3f5e8c6ccb0bca0af94b10cf381fbee07d4443b6
+    digest: sha256:e2af924ef260a681197f745a59dd77f5998a30e72c7ca78fefdb938a27a0343e
+    homepage: https://github.com/pivotal-cf/tanzu-jacoco
+    id: tanzu-buildpacks/jacoco
+    size: 3312316
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 3.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+      id: tanzu-buildpacks/java-native-image
+      version: 4.1.0
+    diffId: sha256:af17bad9355a9882dc1ed76ff34c07d475ecbf1b66a5571ecca1101184da0120
+    digest: sha256:f9504a34b67a38660cd7652753c02dc6a6c356f9cd15ce7463d1a97de1d3c170
+    homepage: https://github.com/pivotal-cf/tanzu-java-native-image
+    id: tanzu-buildpacks/java-native-image
+    order:
+    - group:
+      - id: paketo-buildpacks/graalvm
+        version: 6.0.0
+      - id: paketo-buildpacks/gradle
+        optional: true
+        version: 5.0.0
+      - id: paketo-buildpacks/maven
+        optional: true
+        version: 5.0.0
+      - id: paketo-buildpacks/leiningen
+        optional: true
+        version: 3.0.0
+      - id: paketo-buildpacks/sbt
+        optional: true
+        version: 5.0.0
+      - id: paketo-buildpacks/executable-jar
+        optional: true
+        version: 5.0.0
+      - id: paketo-buildpacks/spring-boot
+        optional: true
+        version: 4.1.0
+      - id: paketo-buildpacks/native-image
+        version: 4.0.0
+      - id: paketo-buildpacks/procfile
+        optional: true
+        version: 4.0.0
+      - id: paketo-buildpacks/environment-variables
+        optional: true
+        version: 3.0.0
+      - id: paketo-buildpacks/image-labels
+        optional: true
+        version: 3.0.0
+    size: 1065
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java-native-image@sha256:662b27ae983ff6b0aed6eca1e5ba7e25cab178204a628ca0542cfe23c25826bf
+    version: 4.1.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:88886c57a8dca8db5b3a77bd4f3d5eb2a075ac997e2064b4c1c417848211710f
+    digest: sha256:481b25affebaea0f23cff05b204888aece516b976308e9fff2cbfeca28ddc2c7
+    homepage: https://github.com/pivotal-cf/tanzu-java
+    id: tanzu-buildpacks/java
+    order:
+    - group:
+      - id: paketo-buildpacks/ca-certificates
+        optional: true
+        version: 2.1.0
+      - id: tanzu-buildpacks/snyk
+        optional: true
+        version: 3.0.0
+      - id: paketo-buildpacks/bellsoft-liberica
+        version: 7.0.1
+      - id: paketo-buildpacks/gradle
+        optional: true
+        version: 5.0.0
+      - id: paketo-buildpacks/leiningen
+        optional: true
+        version: 3.0.0
+      - id: paketo-buildpacks/maven
+        optional: true
+        version: 5.0.0
+      - id: paketo-buildpacks/sbt
+        optional: true
+        version: 5.0.0
+      - id: paketo-buildpacks/executable-jar
+        optional: true
+        version: 5.0.0
+      - id: paketo-buildpacks/apache-tomcat
+        optional: true
+        version: 5.1.0
+      - id: paketo-buildpacks/dist-zip
+        optional: true
+        version: 4.0.0
+      - id: paketo-buildpacks/spring-boot
+        optional: true
+        version: 4.1.0
+      - id: paketo-buildpacks/procfile
+        optional: true
+        version: 4.0.0
+      - id: paketo-buildpacks/azure-application-insights
+        optional: true
+        version: 4.2.0
+      - id: paketo-buildpacks/debug
+        optional: true
+        version: 3.0.0
+      - id: paketo-buildpacks/google-stackdriver
+        optional: true
+        version: 3.4.0
+      - id: paketo-buildpacks/jmx
+        optional: true
+        version: 3.0.0
+      - id: tanzu-buildpacks/apache-skywalking
+        optional: true
+        version: 3.1.0
+      - id: tanzu-buildpacks/appdynamics
+        optional: true
+        version: 3.1.0
+      - id: tanzu-buildpacks/aspectj
+        optional: true
+        version: 3.0.0
+      - id: tanzu-buildpacks/checkmarx
+        optional: true
+        version: 3.0.0
+      - id: tanzu-buildpacks/contrast-security
+        optional: true
+        version: 3.3.0
+      - id: tanzu-buildpacks/dynatrace
+        optional: true
+        version: 3.0.0
+      - id: tanzu-buildpacks/elastic-apm
+        optional: true
+        version: 3.3.0
+      - id: tanzu-buildpacks/jacoco
+        optional: true
+        version: 3.0.0
+      - id: tanzu-buildpacks/jprofiler
+        optional: true
+        version: 3.0.0
+      - id: tanzu-buildpacks/jrebel
+        optional: true
+        version: 3.2.0
+      - id: tanzu-buildpacks/new-relic
+        optional: true
+        version: 3.3.0
+      - id: tanzu-buildpacks/overops
+        optional: true
+        version: 3.3.0
+      - id: tanzu-buildpacks/synopsys
+        optional: true
+        version: 3.0.0
+      - id: tanzu-buildpacks/yourkit
+        optional: true
+        version: 3.1.0
+      - id: paketo-buildpacks/encrypt-at-rest
+        optional: true
+        version: 3.0.0
+      - id: paketo-buildpacks/environment-variables
+        optional: true
+        version: 3.0.0
+      - id: paketo-buildpacks/image-labels
+        optional: true
+        version: 3.0.0
+    size: 1617
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 5.3.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:e6c5b3c9043adaf63b147e4b5217ee3a373a4bbc6b4bb15c12296179ebec2653
+    digest: sha256:fd31a1223ecc682edd9c0a0ad12b3803c49a383fa3304382435e69bdf90a4663
+    homepage: https://github.com/pivotal-cf/tanzu-jprofiler
+    id: tanzu-buildpacks/jprofiler
+    size: 114827241
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 3.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:ba84945b6b9ec5badbaf67e2e92732b402838a9f955d53e01885bce2d76ba3c3
+    digest: sha256:e6de291d87bfc242004e0746315e6df37c3f86ff140cabc259d6b4f2f74cc843
+    homepage: https://github.com/pivotal-cf/tanzu-jrebel
+    id: tanzu-buildpacks/jrebel
+    size: 27648674
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 3.2.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:b293f00d00d6ad64c02d010bc911646980447d28792ad454fa5c2c6dc675f9fb
+    digest: sha256:a9c0a75c67072408ed690d61fc7028dac890d850f03ccca1cdf19530326e3701
+    homepage: https://github.com/pivotal-cf/tanzu-new-relic
+    id: tanzu-buildpacks/new-relic
+    size: 52208572
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 3.3.0
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/php
+      version: 0.0.5
+    diffId: sha256:6714fb24c5c2c9e1f8e4c98a33a6a23e21e8a506c9050c44ec74d522b4caf831
+    digest: sha256:e5c971c4f683052911134ed22cbe7be130bad17bab5cb429a4a7546ca46436f3
+    id: tanzu-buildpacks/nginx
+    size: 12767565
+    stacks:
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    - id: io.buildpacks.stacks.bionic
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_php@sha256:fd5abb334f4adbcf46f42977992af145db04fb262d4c516ff4264f94e1fcd689
+    version: 0.0.46
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/nginx
+      version: 0.0.48
+    diffId: sha256:3e8ee90f1375252de89d3e4197f7163526512be8fe4334ab7c3635c8f1c2eda5
+    digest: sha256:4e086d76cabebfcdbcbddd90a52db3492f67b87e08c4ded7c09c6b7750e71336
+    id: tanzu-buildpacks/nginx
+    size: 12675705
+    stacks:
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    - id: io.buildpacks.stacks.bionic
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_nginx@sha256:e67d5cd2e5240a9eb7a899b9b5d979ad85d0cf6c8182e15424516dac9f577371
+    version: 0.0.48
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/dotnet-core
+      version: 1.0.1
+    diffId: sha256:1d4fee0194987222b2740eaa07e78dc66cef89288dca781ba8c5c56fbd2004c1
+    digest: sha256:1953d5763bc6c7c9ae69b1cbe19b5f27cbb49f06c7faab63180478e8d37a2b63
+    id: tanzu-buildpacks/node-engine
+    size: 232700307
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_dotnet-core@sha256:9ecfbe3c3565f6bc15d5aa116615cf33195a5d27133438d285f9d812f5c72664
+    version: 0.1.3
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/nodejs
+      version: 1.3.0
+    diffId: sha256:6ecc4f09e2476804225176eb2781eebcb4f740273748818bb4645ab2926c2707
+    digest: sha256:c3a298fdaacd7df0e32c1b1c6bfbb7bae6e6b3d56b9b66b17801938599499ad2
+    id: tanzu-buildpacks/node-engine
+    size: 232195986
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_nodejs@sha256:5050ac76d043395422e4ae3cab74d5bb31dc4e9f66414d0be3c4ebb7d1276312
+    version: 0.1.5
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/nodejs
+      version: 1.3.0
+    diffId: sha256:0d6e2e2f685e997971a6944af9692e3f860083fb9f8c957fc6cab0bc279d8481
+    digest: sha256:583a0b4ed24404ee99f3822a0d870b54af246c680b7902129df0b1caf7ac5019
+    id: tanzu-buildpacks/node-start
+    size: 1316634
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_nodejs@sha256:5050ac76d043395422e4ae3cab74d5bb31dc4e9f66414d0be3c4ebb7d1276312
+    version: 0.0.4
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/nodejs
+      version: 1.3.0
+    diffId: sha256:970d1bb6bdff34576120066404305c975eb5097c1223a2b4e545caf6cc8728d7
+    digest: sha256:112292095047554016e5af6d6c2dabdf5a88dd0e04c9c8d303871eb3d44b088b
+    id: tanzu-buildpacks/nodejs
+    order:
+    - group:
+      - id: tanzu-buildpacks/node-engine
+        version: 0.1.5
+      - id: tanzu-buildpacks/yarn
+        version: 0.0.3
+      - id: tanzu-buildpacks/yarn-install
+        version: 0.1.3
+      - id: tanzu-buildpacks/yarn-start
+        version: 0.0.4
+    - group:
+      - id: tanzu-buildpacks/node-engine
+        version: 0.1.5
+      - id: tanzu-buildpacks/npm-install
+        version: 0.1.3
+      - id: tanzu-buildpacks/npm-start
+        version: 0.0.2
+    - group:
+      - id: tanzu-buildpacks/node-engine
+        version: 0.1.5
+      - id: tanzu-buildpacks/node-start
+        version: 0.0.4
+    size: 358
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_nodejs@sha256:5050ac76d043395422e4ae3cab74d5bb31dc4e9f66414d0be3c4ebb7d1276312
+    version: 1.3.0
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/nodejs
+      version: 1.3.0
+    diffId: sha256:97e6b0c537287c5430621ff481c1dfcdd9555eebf9329446f70c2456f29735d0
+    digest: sha256:6d68b866dbf870fb617af98271ead0c89e6e78139578611f2bcea049e145572a
+    id: tanzu-buildpacks/npm-install
+    size: 3216872
+    stacks:
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    - id: io.buildpacks.stacks.bionic
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_nodejs@sha256:5050ac76d043395422e4ae3cab74d5bb31dc4e9f66414d0be3c4ebb7d1276312
+    version: 0.1.3
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/nodejs
+      version: 1.3.0
+    diffId: sha256:21a2e14fc26bd43fd40a09cce80800f4bf001c15526c5c6abf0228eb892626a7
+    digest: sha256:c407dcfa5f957ac1c6ff827c0b9eda15209ef6b493316556e2e7579caeffb522
+    id: tanzu-buildpacks/npm-start
+    size: 1303684
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_nodejs@sha256:5050ac76d043395422e4ae3cab74d5bb31dc4e9f66414d0be3c4ebb7d1276312
+    version: 0.0.2
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:df71333db745501e7b3a99610c663fe344b2c51c3d0393b09aa6fbac21c8abe4
+    digest: sha256:a79764cf1cd05d37c24d1274322a77728512bf1d27e1cb847b40a74bf6d80b9a
+    homepage: https://github.com/pivotal-cf/tanzu-overops
+    id: tanzu-buildpacks/overops
+    size: 51609308
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 3.3.0
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/php
+      version: 0.0.5
+    diffId: sha256:81929bb27e0709bb99e830fdfa9fbf9534f35c85dcfc4903c3034a318e427f2f
+    digest: sha256:07a065fef0b9efc1f95c1db2cae1ebc111e743b8526da33b66452f6bfa8c30f8
+    id: tanzu-buildpacks/php-composer
+    size: 7301415
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_php@sha256:fd5abb334f4adbcf46f42977992af145db04fb262d4c516ff4264f94e1fcd689
+    version: 0.0.31
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/php
+      version: 0.0.5
+    diffId: sha256:3ce52e9ee523ecac3472ab9051169dedcab137d2d6e5299c54b5415dd91a7e58
+    digest: sha256:3714e3b4aa66d01051e4305b81915d07acabc3dfff1143ea944c1cf285f6ae56
+    id: tanzu-buildpacks/php-dist
+    size: 447012383
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_php@sha256:fd5abb334f4adbcf46f42977992af145db04fb262d4c516ff4264f94e1fcd689
+    version: 0.0.44
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/php
+      version: 0.0.5
+    diffId: sha256:14ac8a34fa28dca7b0eca50f2035610ad6678ae82052769c61a04da74a84b1ec
+    digest: sha256:264947f9e2ca02290f7f4662dec1474efb5e5452292a5d8da3c3b0a5c60b4ded
+    id: tanzu-buildpacks/php-web
+    size: 10752976
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_php@sha256:fd5abb334f4adbcf46f42977992af145db04fb262d4c516ff4264f94e1fcd689
+    version: 0.0.25
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/php
+      version: 0.0.5
+    diffId: sha256:2dbc22410fe290d829ffc658dbe85abe393aa8d6937b54986f591a912102feb4
+    digest: sha256:2d6ae00086b7775ba8fbefa937828be6db6b83b7c8cda2b2011a99912c7ed906
+    id: tanzu-buildpacks/php
+    order:
+    - group:
+      - id: tanzu-buildpacks/httpd
+        optional: true
+        version: 0.0.39
+      - id: tanzu-buildpacks/nginx
+        optional: true
+        version: 0.0.46
+      - id: tanzu-buildpacks/php-dist
+        version: 0.0.44
+      - id: tanzu-buildpacks/php-composer
+        optional: true
+        version: 0.0.31
+      - id: tanzu-buildpacks/php-web
+        version: 0.0.25
+    size: 352
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_php@sha256:fd5abb334f4adbcf46f42977992af145db04fb262d4c516ff4264f94e1fcd689
+    version: 0.0.5
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:a176eac1764c99c45be4a607289d072fb4d520b05396829e9355c6bd4d4c5743
+    digest: sha256:3581426eed610b27ff88c7831a1ea3ee0b0e7f327933093e5ce344ccebfe4cc2
+    homepage: https://github.com/pivotal-cf/tanzu-snyk
+    id: tanzu-buildpacks/snyk
+    size: 2209565
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 3.0.0
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:d3c4fbd7faebe0fadb7014597eff8456a51ae73d620a9e9f47ec577050abca5c
+    digest: sha256:100d98de1f7075a0e4147f724b1434754efbe0b6faa304dd25c2079391d8171b
+    homepage: https://github.com/pivotal-cf/tanzu-synopsys
+    id: tanzu-buildpacks/synopsys
+    size: 3149940
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 3.0.0
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/nodejs
+      version: 1.3.0
+    diffId: sha256:fd53e673a9df8e81b3257ff0425881d0584e623f694bda7d655c291821185460
+    digest: sha256:9570c3715f95ef1435c6e7017ad24474477444fcaa6e4ecd428b38ae1a695509
+    id: tanzu-buildpacks/yarn-install
+    size: 3398801
+    stacks:
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    - id: io.buildpacks.stacks.bionic
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_nodejs@sha256:5050ac76d043395422e4ae3cab74d5bb31dc4e9f66414d0be3c4ebb7d1276312
+    version: 0.1.3
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/nodejs
+      version: 1.3.0
+    diffId: sha256:c0c693440eb5ddfad6188343f9f4a0d37d11ce86d6f31021a7033c7faaf68d90
+    digest: sha256:6fee90168d92397028c1b3c043cfc7f81d4d6e541f6badeb2f9354d1e5625adb
+    id: tanzu-buildpacks/yarn-start
+    size: 1304735
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_nodejs@sha256:5050ac76d043395422e4ae3cab74d5bb31dc4e9f66414d0be3c4ebb7d1276312
+    version: 0.0.4
+  - api: "0.2"
+    buildpackage:
+      id: tanzu-buildpacks/nodejs
+      version: 1.3.0
+    diffId: sha256:5e88d3b7611b08fa982af6fbff92d678bef71a3f3099a0e1a9a9bd9c5ebbe7b1
+    digest: sha256:59771baef0eaf7713358718b98f3226414e164a008d12382834a2d5749939e91
+    id: tanzu-buildpacks/yarn
+    size: 5815985
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_nodejs@sha256:5050ac76d043395422e4ae3cab74d5bb31dc4e9f66414d0be3c4ebb7d1276312
+    version: 0.0.3
+  - api: "0.5"
+    buildpackage:
+      homepage: https://github.com/pivotal-cf/tanzu-java
+      id: tanzu-buildpacks/java
+      version: 5.3.0
+    diffId: sha256:3ac8b08df04eed994600e1085306a84336055a6eb4092ffbf1b662999b0db1e6
+    digest: sha256:4f5a95fe98e1156d4222aab48f5c137bf2620f3e2d9db7b558c7ac47291967c9
+    homepage: https://github.com/pivotal-cf/tanzu-yourkit
+    id: tanzu-buildpacks/yourkit
+    size: 8803608
+    stacks:
+    - id: io.buildpacks.stacks.bionic
+    - id: org.cloudfoundry.stacks.cflinuxfs3
+    storeImage:
+      image: registry.lab.livefire.dev/tbs/build-service/tanzu-buildpacks_java@sha256:1b8dcd7fddbb9cc797c549183d5505e92f5b4888fb223776d4730c0070f2c30e
+    version: 3.1.0
+  conditions:
+  - lastTransitionTime: "2021-05-14T18:13:51Z"
+    status: "True"
+    type: Ready
+  observedGeneration: 1
